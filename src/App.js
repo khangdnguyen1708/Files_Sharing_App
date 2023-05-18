@@ -4,12 +4,8 @@ import Mainpage from "./component/Mainpage/Mainpage";
 import Navigation from "./component/Header/Navigation";
 import UploadBook from "./component/Upload/UploadBook";
 import UpdateBook from "./component/Update/UpdateBook";
-import Basket from "./component/Basket/Basket";
 import Admin from "./component/Admin/Admin";
 import BookDetail from "./component/Mainpage/BookDetail";
-import Login from "./component/Authen/Login";
-import Register from "./component/Authen/Register";
-import OrderInfor from "./component/Admin/OrderInfor";
 
 class App extends Component {
   constructor(props) {
@@ -95,35 +91,6 @@ class App extends Component {
             <Route path="/update" element={this.state.isAdmin ? <UpdateBook /> : null }></Route>
             <Route path="/admin" element={this.state.isAdmin ? <Admin /> : null}></Route>
             <Route path="/detail/:name" element={<BookDetail onAdd={this.onAdd}/>}></Route>
-            <Route
-              path="/cart"
-              element={
-                <Basket
-                  currentItemInCart={this.state.itemInCard}
-                  onAdd={this.onAdd}
-                  onRemove={this.onRemove}
-                  checkOut={this.clearCart}
-                />
-              }
-            ></Route>
-            <Route
-              path="/login"
-              element={
-                <Login
-                  setNavbar={this.hiddenNavbar}
-                  setAdmin={this.setAdmin}
-                />
-              }
-            ></Route>
-            <Route
-              path="/register"
-              element={
-                <Register
-                  setNavbar={this.hiddenNavbar}
-                />
-              }
-            ></Route>
-            <Route path="/order" element={this.state.isAdmin ? <OrderInfor /> : null}></Route>
           </Routes>
         </Router>
       </div>

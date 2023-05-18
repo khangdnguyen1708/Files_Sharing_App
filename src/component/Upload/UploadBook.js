@@ -75,23 +75,19 @@ class UploadBook extends Component {
             <div className="container p-5 my-5 border">
                 <div className="mb-3">
                     <label for="exampleFormControlInput1" className="form-label">ID</label>
-                    <input type="text" className="form-control" onChange={(e) => this.setState({ id: e.target.value })} value={this.state.id} placeholder="ID of book" required></input>
+                    <input type="text" className="form-control" onChange={(e) => this.setState({ id: e.target.value })} value={this.state.id} placeholder="file ID" required></input>
                 </div>
                 <div className="mb-3">
                     <label for="exampleFormControlInput1" className="form-label">Name</label>
-                    <input type="text" onChange={(e) => this.setState({ bookname: e.target.value })} value={this.state.bookname} className="form-control" placeholder="Book name" required></input>
+                    <input type="text" onChange={(e) => this.setState({ bookname: e.target.value })} value={this.state.bookname} className="form-control" placeholder="File name" required></input>
                 </div>
                 <div className="mb-3">
                     <label for="exampleFormControlInput1" className="form-label">Author</label>
-                    <input type="text" onChange={(e) => this.setState({ author: e.target.value })} value={this.state.author} className="form-control" placeholder="Author book"></input>
+                    <input type="text" onChange={(e) => this.setState({ author: e.target.value })} value={this.state.author} className="form-control" placeholder="Author name"></input>
                 </div>
                 <div className="mb-3">
                     <label for="exampleFormControlInput1" className="form-label">Category</label>
                     <input type="text" onChange={(e) => this.setState({ category: e.target.value })} value={this.state.category} className="form-control" placeholder="Category"></input>
-                </div>
-                <div className="mb-3">
-                    <label for="exampleFormControlInput1" className="form-label">Price</label>
-                    <input type="text" onChange={(e) => this.setState({ price: e.target.value })} value={this.state.price} className="form-control" placeholder="USD"></input>
                 </div>
                 <div className="mb-3">
                     <label for="exampleFormControlTextarea1" className="form-label">Description</label>
