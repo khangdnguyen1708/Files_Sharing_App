@@ -51,11 +51,13 @@ function Mainpage(props) {
                         <div className="caption" id={book.id}>
                             <h5>{book.name}</h5>
                             <h6>{book.author}</h6>
-                            <div>${Number(book.price).toFixed(2)}</div>
+                            <a href={book.image}>
+                                <input type="button" className="btn btn-warning btn-lg btn-block col-6" value='Download' target="_blank"/>
+                            </a>
                         </div>
-                        <div className="mt-3">
+                        {/* <div className="mt-3">
                             <button type="button" className="btn btn-warning" onClick={() => props.onAdd(book)}>Add to cart</button>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
     });

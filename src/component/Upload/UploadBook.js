@@ -99,7 +99,7 @@ class UploadBook extends Component {
                 </div>
                 <div className="mb-3">
                     <label for="exampleFormControlInput1" className="form-label">Select image:</label>
-                    <input className="form-control" type="file" id="img" name="img" accept="image/*" onChange={(e) => this.setState({ fileToUpload: e.target.files[0] })}></input>
+                    <input className="form-control" type="file" id="img" name="img" accept="image/*,.pdf" onChange={(e) => this.setState({ fileToUpload: e.target.files[0] })}></input>
                 </div>
                 <div>
                     <input type="checkbox" className="btn-check" id="btn-check-outlined" autocomplete="off" onClick={ this.handleValidation }/>
