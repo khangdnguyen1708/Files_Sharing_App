@@ -16,7 +16,17 @@ function Mainpage(props) {
             url: `${config.APP_API_URL}/books`,
         })
         .then(res => {
-            setBooks(res.data)
+            var data = []
+            for (const property in res.data) {
+                var temp = {}
+                temp["_id"] =  property
+                for (const property2 in res.data[property]) {
+                    temp[property2] = res.data[property][property2]
+                }
+
+                data.push(temp)
+            }
+            setBooks(data)
         })
         .catch(err => { 
             console.log(err); 
