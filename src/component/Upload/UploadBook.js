@@ -51,16 +51,16 @@ class UploadBook extends Component {
                 if (status === 200)
                 {
                     setTimeout('', 3000);
-                    alert("Book upload successfull")
+                    alert("File upload successfull")
                     this.redirectPage();
                 }
                 else
                 {
-                    alert("Error Occured while uploading the book")
+                    alert("Error Occured while uploading the file")
                 }
             }
             catch{
-                alert("Error Occured while uploading the book 1")
+                alert("Error Occured while uploading the file")
             }
         }
         else
